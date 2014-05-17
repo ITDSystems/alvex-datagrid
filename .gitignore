@@ -1,5 +1,6 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.next
-release.properties
+*/alf_data_dev/
+*/target/
+*/pom.xml.tag
+*/pom.xml.releaseBackup
+*/pom.xml.next
+*/release.properties
