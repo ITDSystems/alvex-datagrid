@@ -1,6 +1,8 @@
 <#macro renderAlvexDatagridHTML id hideMeta=false hideConfig=false hidePanel=false hideSelect=false hidePaginator=false>
 
 <!-- Data Grid -->
+<#include "/org/alfresco/components/form/form.css.ftl" />
+<#include "/org/alfresco/components/form/form.js.ftl" />
 <@script type="text/javascript" src="${url.context}/res/yui/calendar/calendar.js" />
 <@link rel="stylesheet" type="text/css" href="${url.context}/res/css/components/alvex/datalists/datagrid.css" />
 <@script type="text/javascript" src="${url.context}/res/modules/data-lists/datalist-actions.js" />
