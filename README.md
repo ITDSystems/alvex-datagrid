@@ -14,3 +14,4 @@ Generic purpose datagrid enhancements extracted from Alvex sources and refactore
 
 ##Features
 1. End user features are described in [this blog post](http://blog.itdhq.com/post/86483480150/2014-05-22-alvex-datagrid-end-user-features).
+2. We have also [a short video](http://www.youtube.com/watch?v=5OiTKq-VJ98) regarding end user features.
