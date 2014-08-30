@@ -60,7 +60,7 @@ if (typeof Alvex == "undefined" || !Alvex)
     */
    Alvex.DataGrid = function(htmlId)
    {
-      Alvex.DataGrid.superclass.constructor.call(this, "Alvex.DataGrid", htmlId, ["button", "container", "datasource", "datatable", "paginator", "animation", "history"]);
+      Alvex.DataGrid.superclass.constructor.call(this, "Alfresco.component.DataGrid", htmlId, ["button", "container", "datasource", "datatable", "paginator", "animation", "history"]);
       this.eventGroup = htmlId;
 
       // Initialise prototype properties
