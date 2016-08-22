@@ -65,7 +65,7 @@ if (typeof Alvex === "undefined" || !Alvex)
          // Get constraints for fields in question
          // WA: very-very long form description to parse
          var text = response.serverResponse.responseText;
-         var constraints = text.replace(/[\s\S]*fieldConstraints:/, "").replace(/\}\)\.setMessages\([\s\S]*/, "");
+         var constraints = text.replace(/[\s\S]*fieldConstraints:/, "").replace(/,[\s]*disableSubmitButton[\s\S]*/, "");
          var json = eval('(' + constraints + ')');
          for(var i in json)
             this.datalistColumnsConstraints[ json[i].fieldId.replace(/^tmp_/,"") ] = json[i];
