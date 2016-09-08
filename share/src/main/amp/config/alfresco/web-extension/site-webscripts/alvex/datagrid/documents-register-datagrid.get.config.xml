@@ -1,0 +1,10 @@
+<dataGrid>
+   <actionSet>
+      <!-- Config for using popup dialogs for view and edit forms -->
+      <!--action type="action-link" func="Alvex.DatagridItemViewAction" className="onActionView" permission="" label="actions.view" /-->
+      <!--action type="action-link" func="Alvex.DatagridItemEditAction" className="onActionEdit" permission="edit" label="actions.edit" /-->
+      <!-- Uncomment if you prefer full page editing -->
+      <action type="action-link" href="edit-metadata?nodeRef=" className="onActionEdit" permission="edit" label="actions.edit" />
+      <action type="action-link" func="Alvex.DatagridItemDeleteAction" className="onActionDelete" permission="delete" label="actions.delete-row" />
+   </actionSet>
+</dataGrid>

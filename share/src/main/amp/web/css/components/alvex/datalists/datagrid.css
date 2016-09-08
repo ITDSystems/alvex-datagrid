@@ -1,0 +1,505 @@
+.datagrid
+{
+   padding-top: 0.5em;
+   //visibility: hidden;
+}
+
+.datagrid .datagrid-description
+{
+   
+}
+
+/* DataGrid Metadata */
+.datagrid .datagrid-meta
+{
+   margin-left: 1em;
+   width: 60%;
+   float: left;
+}
+
+/* DataGrid bar */
+
+.datagrid .datagrid-bar
+{
+   margin: 1em -10px;
+   padding: 4px 0.5em 2px;
+}
+
+.datagrid .datagrid-bar-bottom
+{
+   margin-top: 2em;
+   display: none;
+}
+
+/* DataGrid bar Buttons and Paginator */
+
+.datagrid .datagrid-bar .item-select
+{
+   float: left;
+   width: 15%;
+}
+
+.datagrid .datagrid-bar .paginator
+{
+   float: left;
+   margin: 0;
+   padding: 4px 0;
+   text-align: center;
+   width: 80%;
+}
+
+.datagrid .datagrid-bar .yui-pg-current
+{
+   margin-right: 0;
+}
+
+/* DataGrid bar Select menu */
+
+.datagrid .item-select .yuimenuitemlabel span
+{
+   background-position: 2px 50%;
+   background-repeat: no-repeat;
+   cursor: pointer;
+   display: block;
+   margin-left: -4px;
+   min-height: 16px;
+   padding: 2px 0px 1px 24px;
+}
+
+.datagrid .item-select .selectAll
+{
+   background-image: url(/share/res/components/images/select-rows-all-16.png);
+}
+
+.datagrid .item-select .selectNone
+{
+   background-image: url(/share/res/components/images/select-rows-none-16.png);
+}
+
+.datagrid .item-select .selectInvert
+{
+   background-image: url(/share/res/components/images/select-invert-16.png);
+}
+
+/* Data Table */
+
+.datagrid .grid table
+{
+   border-color: #e0e0e0;
+   width: 100%;
+}
+
+.datagrid .grid tbody
+{
+   outline: none;
+}
+
+.datagrid .grid .yui-dt table
+{
+   border: none;
+}
+
+.datagrid .grid.yui-dt .yui-dt-data td
+{
+   border-bottom: 1px solid #f0f0f0;
+   vertical-align: top;
+}
+
+.datagrid .grid.yui-dt .yui-dt-data .yui-dt-last td
+{
+   border-bottom: medium none;
+}
+
+.datagrid .grid.yui-dt tr.yui-dt-first td
+{
+   border-top: medium none;
+}
+
+.datagrid .grid.yui-dt td.yui-dt-last
+{
+   vertical-align: middle;
+}
+
+.datagrid .yui-dt-liner
+{
+   padding: 4px;
+}
+
+.datagrid .yui-dt-col-nodeRef
+{
+   width: 24px;
+}
+
+.datagrid .yui-dt-col-actions
+{
+   width: 86px;
+}
+
+.datagrid .yui-dt-col-actions .yui-dt-liner
+{
+   padding: 3px;
+}
+
+.datagrid .yui-dt-error
+{
+   background: red;
+   color: white;
+   font-weight: bold;
+   margin: 1em auto;
+   padding: 1em;
+}
+
+.datagrid .yui-dt-liner img
+{
+   vertical-align: text-bottom;
+}
+
+/* Data Types */
+
+.datagrid span.person
+{
+   background: url(/share/res/components/images/filetypes/generic-user-16.png) no-repeat;
+   padding-left: 20px;
+}
+
+.datagrid span.container
+{
+   background: url(/share/res/components/images/filetypes/generic-folder-16.png) no-repeat;
+   padding-left: 20px;
+}
+
+.datagrid span.document
+{
+   background: url(/share/res/components/images/filetypes/generic-file-16.png) no-repeat;
+   padding-left: 20px;
+}
+
+/* Actions */
+
+.datagrid .action-set div
+{
+   display: block;
+   margin: 0;
+}
+
+.datagrid a.action-link,
+.datagrid a.simple-link,
+.datagrid a.show-more
+{
+   background-position: 4px 1px;
+   background-repeat: no-repeat;
+   border: 1px solid transparent;
+   display: block;
+   min-height: 16px;
+   padding: 2px 0 2px 24px;
+}
+
+.datagrid .action-set a:active,
+.datagrid .action-set a:hover,
+.datagrid .action-set .highlighted
+{
+   background-color: #fff;
+   border: 1px solid #2b6eb5;
+   text-decoration: none;
+}
+
+.datagrid div.more-actions
+{
+   background-color: #fff;
+   border: 1px solid #2b6eb5;
+   clear: left;
+   margin-left: -22px;
+   margin-top: 1px;
+   position: absolute;
+   width: 200px;
+}
+
+.datagrid .more-actions a.action-link,
+.datagrid .more-actions a.simple-link
+{
+   border: 1px solid #fff;
+}
+
+.datagrid .more-actions a:active,
+.datagrid .more-actions a:hover
+{
+   background-color: #2b6eb5;
+   border: 1px solid #2b6eb5;
+   color: #fff;
+}
+
+/* Actions: Simple view */
+
+.datagrid div.simple div
+{
+   float: left;
+   line-height: 1em;
+}
+
+.datagrid div.simple a.action-link,
+.datagrid div.simple a.simple-link,
+.datagrid div.simple a.show-more
+{
+   background-position: 4px 0;
+   min-height: 16px;
+   padding: 0 0 0 24px;
+}
+
+.datagrid div.simple a.action-link span,
+.datagrid div.simple a.simple-link span
+{
+   display: none;
+}
+
+.datagrid div.simple div.more-actions
+{
+   margin-left: -122px;
+   margin-top: 1.5em;
+}
+
+.datagrid div.simple div.more-actions div
+{
+   float: none;
+}
+
+.datagrid div.simple div.more-actions a.action-link span,
+.datagrid div.simple div.more-actions a.simple-link span
+{
+   display: block;
+}
+
+/* Actions: Icons */
+
+.datagrid .action-set a
+{
+   background-image: url(/share/res/components/images/generic-file-16.png);
+}
+
+.datagrid .onActionShowMore a
+{
+   background-image: url(/share/res/components/images/plus-16.png);
+}
+
+.datagrid .onActionView a
+{
+   background-image: url(/share/res/components/images/list-16.png);
+}
+
+.datagrid .onActionStartWorkflow a
+{
+   background-image: url(/share/res/components/images/workflow-16.png);
+}
+
+.datagrid .onActionEdit a
+{
+   background-image: url(/share/res/components/images/edit-16.png);
+}
+
+.datagrid .onActionDuplicate a
+{
+   background-image: url(/share/res/components/images/duplicate-row-16.png);
+}
+
+.datagrid .onActionDelete a
+{
+   background-image: url(/share/res/components/images/delete-row-16.png);
+}
+
+.datagrid .onActionAttach a
+{
+   background-image: url(/share/res/components/images/add-icon-16.png);
+}
+
+/* Forms */
+
+.form-container .form-fields
+{
+   border-bottom: medium none;
+   padding: 1em;
+}
+
+/* Generic forms layout, tweaked for 1/3 : 2/3 and 2/3 : 1/3 sets */
+
+.alfresco-share .yui-panel .bd .form-container .yui-gd .yui-u.first
+{
+	width: 31%;
+}
+
+.alfresco-share .yui-panel .bd .form-container .yui-gd .yui-u
+{
+	width: 62%;
+}
+
+.alfresco-share .yui-panel .bd .form-container .yui-gc .yui-u.first
+{
+	width: 62%;
+}
+
+.alfresco-share .yui-panel .bd .form-container .yui-gc .yui-u
+{
+	width: 32%;
+}
+
+/* Details Form */
+
+.form-container .edit-dataitem a
+{
+   background: transparent url(/share/res/components/images/edit-metadata-16.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+/* Search form */
+
+span.datagrid-search-field
+{
+	float:left;
+	display:inline-block;
+	margin-left:4px;
+	margin-bottom:4px;
+	margin-top:4px;
+}
+
+.yui-skin-default .search-cal-button .yui-menu-button button {
+	background: url(/share/res/components/form/images/calendar.png) center center no-repeat; 
+	text-indent: -4em; 
+	overflow: hidden; 
+	padding: 0 .75em; 
+	width: 2em; 
+}
+
+span.search-cal-button
+{ 
+	display:block; 
+	height:16px; 
+	width:16px; 
+	top:0; 
+	left: 3px; 
+	background-image: url(/share/res/components/form/images/calendar.png); 
+}
+
+span.datagrid-search-button
+{ 
+	display:block; 
+	height:16px; 
+	width:16px; 
+	top:0; 
+	left: 3px; 
+	background-image: url(/share/res/components/images/search-16.png); 
+}
+
+span.datagrid-clear-search-button
+{ 
+	display:block; 
+	height:16px; 
+	width:16px; 
+	top:0; 
+	left: 3px; 
+	background-image: url(/share/res/components/images/delete-16.png); 
+}
+
+.small-btn .yui-button button
+{
+	padding: 3px;
+}
+
+/* Datagrid config */
+/* TODO: move it out of datagrid */
+
+.datagrid .datagrid-actions
+{
+   margin-left: 1em;
+   width: 30%;
+   float: right;
+   text-align: right;
+}
+
+.datagrid .datagrid-actions .configure-page span.first-child
+{
+   background: url("/share/res/components/images/edit-16.png") no-repeat scroll 12px 4px transparent;
+   padding-left: 22px;
+}
+
+div.column-config-dialog-body
+{
+	height: 275px;
+}
+
+div.used
+{
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	width: 350px;
+	float: left;
+}
+
+div.available
+{
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	width: 350px;
+	float: right;
+}
+
+h3.padded
+{
+	padding: 1em;
+}
+
+ul.usedList,
+ul.availableList
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px dashed #000000;
+}
+
+ul.usedList
+{
+	height: 180px;
+}
+
+ul.availableList
+{
+	height: 180px;
+}
+
+.tableColumn
+{
+	margin: 0.5em;
+	background-color: #F7F7F7;
+	border: 1px dashed #C3C3C3;
+	width: 300px;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	border-style: none;
+	border-width: 0;
+	overflow: hidden;
+	cursor: move;
+}
+
+.tableColumn span
+{
+	position: relative;
+	top: 0em;
+	left: 0em;
+	opacity: 1;
+	white-space: nowrap;
+	filter: alpha(opacity=100);
+}
+
+.tableColumn div
+{
+	background-color: #FFFFFF;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+	height: 2em;
+	position: relative;
+	top: -1.5em;
+	width: 8em;
+}
