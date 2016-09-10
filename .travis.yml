@@ -17,7 +17,8 @@ before_script:
     - wget https://raw.githubusercontent.com/ITDSystems/alvex/master/scripts/run_integration_tests.sh
     - chmod +x mvnw
     - chmod +x run_integration_tests.sh
-    - base64 -d <<< $MAVEN_DEPLOY_SETTINGS | tar -xz -C $HOME
+    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then base64 -d <<< $MAVEN_DEPLOY_SETTINGS | tar -xz -C $HOME; fi'
+
 
 script:
     - rm -rf $HOME/.m2/repository/com/alvexcore
@@ -29,8 +30,8 @@ script:
     - ./run_integration_tests.sh share
 
 after_success:
-    - ./mvnw -f repo/pom.xml deploy -P make-jar
-    - ./mvnw -f share/pom.xml deploy -P make-jar
+    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./mvnw -f repo/pom.xml deploy -P make-jar; fi'
+    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./mvnw -f share/pom.xml deploy -P make-jar; fi'
 
 
 
