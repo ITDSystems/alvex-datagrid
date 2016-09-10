@@ -1,0 +1,39 @@
+sudo: false
+
+language: java
+jdk:
+  - oraclejdk8
+
+cache:
+    directories:
+        - $HOME/.m2
+        - $HOME/apache-maven-3.3.9
+
+before_script:
+    - wget https://raw.githubusercontent.com/ITDSystems/alvex/master/scripts/mvn.sh -O ./mvnw
+    - wget https://raw.githubusercontent.com/ITDSystems/alvex/master/scripts/run_integration_tests.sh
+    - chmod +x mvnw
+    - chmod +x run_integration_tests.sh
+    - base64 -d <<< $MAVEN_DEPLOY_SETTINGS | tar -xz -C $HOME
+
+script:
+    - rm -rf $HOME/.m2/repository/com/alvexcore
+    - ./mvnw -f repo/pom.xml clean package
+    - ./mvnw -f repo/pom.xml clean package -P make-jar
+    - ./mvnw -f share/pom.xml clean package
+    - ./mvnw -f share/pom.xml clean package -P make-jar
+    - ./run_integration_tests.sh repo
+    - ./run_integration_tests.sh share
+
+after_success:
+    - ./mvnw -f repo/pom.xml deploy -P make-jar
+    - ./mvnw -f share/pom.xml deploy -P make-jar
+
+
+
+notifications:
+  email:
+    recipients:
+      - alvex-build@itdhq.com
+    on_success: change
+    on_failure: always
