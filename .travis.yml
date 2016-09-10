@@ -9,6 +9,9 @@ cache:
         - $HOME/.m2
         - $HOME/apache-maven-3.3.9
 
+before_cache:
+    - rm -rf $HOME/.m2/repository/com/alvexcore
+
 before_script:
     - wget https://raw.githubusercontent.com/ITDSystems/alvex/master/scripts/mvn.sh -O ./mvnw
     - wget https://raw.githubusercontent.com/ITDSystems/alvex/master/scripts/run_integration_tests.sh
