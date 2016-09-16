@@ -30,7 +30,7 @@ To build Alvex follow [this guide](https://github.com/ITDSystems/alvex#build-com
 # Use
 
 ### Creating custom cell renderers 
-[blog post](http://blog.itdhq.com/post/91354985705/2014-07-10-alvex-datagrid-custom-renderers).
+[blog post](http://blog.itdhq.com/post/91354985705/2014-07-10-alvex-datagrid-custom-renderers)
 
 ### Adding custom item actions 
-[blog post](http://blog.itdhq.com/post/91431300460/2014-07-11-alvex-datagrid-custom-actions).
+[blog post](http://blog.itdhq.com/post/91431300460/2014-07-11-alvex-datagrid-custom-actions)
