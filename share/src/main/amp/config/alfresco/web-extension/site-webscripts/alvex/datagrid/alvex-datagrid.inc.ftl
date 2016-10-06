@@ -6,14 +6,14 @@
 <@script type="text/javascript" src="${url.context}/res/yui/calendar/calendar.js" />
 <@link rel="stylesheet" type="text/css" href="${url.context}/res/css/components/alvex/datalists/datagrid.css" />
 <@script type="text/javascript" src="${url.context}/res/modules/data-lists/datalist-actions.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/alvex.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/datalists/datagrid-renderers.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/datalists/datagrid-search.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/datalists/datagrid-search-renderers.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/datalists/datagrid.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/datalists/datagrid-actions.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/simple-dialog.js" />
-<@script type="text/javascript" src="${url.context}/res/scripts/components/alvex/interval-calendar.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/alvex.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/datalists/datagrid-renderers.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/datalists/datagrid-search.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/datalists/datagrid-search-renderers.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/datalists/datagrid.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/datalists/datagrid-actions.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/simple-dialog.js" />
+<@script type="text/javascript" src="${url.context}/res/js/components/alvex/interval-calendar.js" />
 <@script type="text/javascript" src="${url.context}/res/js/alfresco-dnd.js" />
 
 <div id="${id}-body" class="datagrid">
