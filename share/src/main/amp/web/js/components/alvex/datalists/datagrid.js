@@ -666,7 +666,7 @@ if (typeof Alvex == "undefined" || !Alvex)
 
          this.renderDataListMeta();
 
-         var url = this.getColumnsConfigUrl(this.datalistMeta);
+				 var url = this.getColumnsConfigUrl(this.datalistMeta);
          // Query the visible columns for this list's item type
          Alfresco.util.Ajax.jsonGet(
          {
@@ -998,7 +998,7 @@ if (typeof Alvex == "undefined" || !Alvex)
          ];
 
          var column;
-         var initialSortBy = "prop_alvexdt_id";
+         var initialSortBy = "prop_cm_created";
          var initialSortOrder = YAHOO.widget.DataTable.CLASS_ASC;
          for (var i = 0, ii = this.datalistColumns.length; i < ii; i++)
          {
@@ -1494,9 +1494,10 @@ if (typeof Alvex == "undefined" || !Alvex)
        */
       onActiveDataListChanged: function DataGrid_onActiveDataListChanged(layer, args)
       {
-         if( args[1].eventGroup !== "*" && !$hasEventInterest(this, args) )
+				 if (args[1].dataList == null) {
+         	if( args[1].eventGroup !== "*" && !$hasEventInterest(this, args) )
             return;
-
+				 }
          var obj = args[1];
          if ((obj !== null) && (obj.dataList !== null))
          {
