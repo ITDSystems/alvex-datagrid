@@ -18,6 +18,7 @@ Compatible with Alfresco 4.2, 5.0, 5.1.
 
 This component depends on:
 * [Alvex Utils](https://github.com/ITDSystems/alvex-utils)
+* [Alvex Masterdata](https://github.com/ITDSystems/alvex-masterdata)
 
 # Downloads
 
