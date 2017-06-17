@@ -25,7 +25,7 @@ if (typeof Alvex === "undefined" || !Alvex)
 
 /**
  * Data Lists: DataGrid component.
- * 
+ *
  * @namespace Alvex
  * @class Alvex.DataGridSearch
  */
@@ -33,12 +33,12 @@ if (typeof Alvex === "undefined" || !Alvex)
 {
    var $html = Alfresco.util.encodeHTML;
    var $func = Alvex.util.getFunctionByName;
-   
+
    Alvex.DataGridSearch = {};
    Alvex.DataGridSearch.prototype =
    {
       defaultSearchRenderersNames: {},
-	  
+
       /**
        * Render search form
        */
@@ -59,17 +59,15 @@ if (typeof Alvex === "undefined" || !Alvex)
 
          if( !this.datalistColumns.length || this.datalistColumns.length === 0 )
             return;
-		
+
          Dom.removeClass(this.id + "-search-container", "hidden");
 
          // Get constraints for fields in question
-         // WA: very-very long form description to parse
-         var text = response.serverResponse.responseText;
-         // Second replace is kind of damned magic to match both old and new Share - see PR#3
-         var constraints = text.replace(/[\s\S]*fieldConstraints:/, "").replace(/(,[\s]*disableSubmitButton[\s\S]*)?\}\)\.setMessages\([\s\S]*/, "");
-         var json = eval('(' + constraints + ')');
-         for(var i in json)
-            this.datalistColumnsConstraints[ json[i].fieldId.replace(/^tmp_/,"") ] = json[i];
+         for(var i in response.json.fields)
+         {
+            var field = response.json.fields[i];
+            this.datalistColumnsConstraints[ "prop_" + field.name.replace(":","_") ] = field.allowedValues;
+         }
 
          // Clear everything
          if( this.widgets.searchForm )
@@ -79,7 +77,7 @@ if (typeof Alvex === "undefined" || !Alvex)
          // Render table to hold search field
          var outerEl = this.widgets.dataTable.getColumn(this.ITEM_KEY).getThEl();
          var width = Number(outerEl.offsetWidth) - 4;
-         var row = '<td id="' + this.id + '-search-span-' + 'nodeRef' + '-c" class="datagrid-search-field" ' 
+         var row = '<td id="' + this.id + '-search-span-' + 'nodeRef' + '-c" class="datagrid-search-field" '
                    + 'style="min-width:' + width + 'px;">&nbsp;</td>';
 
          for( var col = 0; col < this.datalistColumns.length; col++ )
@@ -87,10 +85,10 @@ if (typeof Alvex === "undefined" || !Alvex)
             var key = this.dataResponseFields[col];
             outerEl = this.widgets.dataTable.getColumn(key).getThEl();
             width = Number(outerEl.offsetWidth) - 4;
-            row += '<td id="' + this.id + '-search-span-' + key + '-c" class="datagrid-search-field" ' 
+            row += '<td id="' + this.id + '-search-span-' + key + '-c" class="datagrid-search-field" '
                    + ' style="min-width:' + width + 'px;"></td>';
          }
-         row += '<td id="' + this.id + '-search-span-' + 'actions' + '-c" style="min-width:90px;" class="datagrid-search-field">' 
+         row += '<td id="' + this.id + '-search-span-' + 'actions' + '-c" style="min-width:90px;" class="datagrid-search-field">'
                   + '<span class="small-btn" id="' + this.id + '-search-span-' + 'actions-search' + '"></span>'
                   + '<span class="small-btn" id="' + this.id + '-search-span-' + 'actions-clear' + '"></span>'
                   + '</td>';
@@ -100,7 +98,7 @@ if (typeof Alvex === "undefined" || !Alvex)
          for( var col = 0; col < this.datalistColumns.length; col++ )
          {
             var key = this.dataResponseFields[col];
-            
+
             var datalistColumn = this.datalistColumns[col];
             var renderer = null;
             var datatype = "";
@@ -130,17 +128,17 @@ if (typeof Alvex === "undefined" || !Alvex)
             var curValue = this.savedSearch[key] ? this.savedSearch[key] : "";
 
             // Render field
-            var searchFieldHtmlId = this.id + '-search-span-' + key; 
+            var searchFieldHtmlId = this.id + '-search-span-' + key;
             renderer.call(this, searchFieldHtmlId, key, curValue, availableOptions);
          }
 
          var me = this;
          // Create search form inlined buttons
-         var oSearchButton = new YAHOO.widget.Button({ type: "push", label: '<span class="datagrid-search-button"></span>', 
-                                                        container: this.id + '-search-span-' + 'actions-search', 
+         var oSearchButton = new YAHOO.widget.Button({ type: "push", label: '<span class="datagrid-search-button"></span>',
+                                                        container: this.id + '-search-span-' + 'actions-search',
 														onclick: { fn: me.doSearch, scope: me } });
 
-         var oClearButton = new YAHOO.widget.Button({ type: "push", label: '<span class="datagrid-clear-search-button"></span>', 
+         var oClearButton = new YAHOO.widget.Button({ type: "push", label: '<span class="datagrid-clear-search-button"></span>',
                                                         container: this.id + '-search-span-' + 'actions-clear',
                                                         onclick: { fn: me.clearSearch, scope: me } });
 
@@ -148,7 +146,7 @@ if (typeof Alvex === "undefined" || !Alvex)
          for( var col = 0; col < this.datalistColumns.length; col++ )
          {
             var key = this.dataResponseFields[col];
-			var searchFieldHtmlId = this.id + '-search-span-' + key; 
+			var searchFieldHtmlId = this.id + '-search-span-' + key;
             var el = Dom.get( searchFieldHtmlId );
             if( el !== null )
             {
@@ -192,7 +190,7 @@ if (typeof Alvex === "undefined" || !Alvex)
          for( var col = 0; col < this.datalistColumns.length; col++ )
          {
             var key = this.dataResponseFields[col];
-			var searchFieldHtmlId = this.id + '-search-span-' + key; 
+			var searchFieldHtmlId = this.id + '-search-span-' + key;
             var type = this.datalistColumns[key].dataType;
             if( type === "ghost" )
                continue;
