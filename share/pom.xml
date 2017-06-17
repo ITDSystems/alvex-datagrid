@@ -46,5 +46,11 @@
             <version>1.19-SNAPSHOT</version>
             <classifier>installable</classifier>
         </dependency>
+	<dependency>
+            <groupId>com.alvexcore.repo</groupId>
+            <artifactId>masterdata</artifactId>
+            <version>1.51-SNAPSHOT</version>
+            <classifier>installable</classifier>
+        </dependency>
     </dependencies>
 </project>
