@@ -14,7 +14,7 @@ Can be used in place of Alfresco default datagrid. Provides following features:
 End user features are described in [this blog post](http://blog.itdhq.com/post/86483480150/2014-05-22-alvex-datagrid-end-user-features).
 Also we have [a short video](http://www.youtube.com/watch?v=5OiTKq-VJ98) regarding end user features.
 
-Compatible with Alfresco 4.2, 5.0, 5.1.
+Compatible with Alfresco 5.1, 5.2.
 
 This component depends on:
 * [Alvex Utils](https://github.com/ITDSystems/alvex-utils)
