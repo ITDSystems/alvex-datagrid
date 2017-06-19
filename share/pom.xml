@@ -47,7 +47,7 @@
             <classifier>installable</classifier>
         </dependency>
 	<dependency>
-            <groupId>com.alvexcore.repo</groupId>
+            <groupId>com.alvexcore.share</groupId>
             <artifactId>masterdata</artifactId>
             <version>1.51-SNAPSHOT</version>
             <classifier>installable</classifier>
