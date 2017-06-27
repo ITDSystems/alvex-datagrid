@@ -7,9 +7,6 @@
    {
       siteId: "${page.url.templateArgs.site!""}"
    }).setMessages(${messages});
-   new Alvex.DataListsToolbar("${id}").setOptions(
-   {
-   }).setMessages(${messages});
 //]]></script>
 <div id="${args.htmlid}-body" class="datalist-toolbar toolbar">
    <div id="${args.htmlid}-headerBar" class="header-bar flat-button theme-bg-2">
